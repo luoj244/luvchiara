@@ -1,0 +1,150 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("assets/pinkbackdrop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+.proposal-box {
+  color: rgb(244, 131, 150);
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#confetti-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: none;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff1493;
+  animation: confetti-fall 5s linear infinite;
+}
+
+@keyframes confetti-fall {
+  0% { top: -10px; }
+  100% { top: 100vh; }
+}
+
+button {
+  font-size: 16px;
+  font-family: 'Fuzzy Bubbles', cursive;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 5px;
+  background-color: #f7a8cf;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #ff1493;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+@media (hover: none) {
+  button:hover {
+      background-color: #f7a8cf; /* Original pink color */
+      transform: none;
+      color: white;
+  }
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+  0%, 100% { transform: translateX(0); }
+}
+
+.red-bg {
+  background-color: #ff0000;
+}
+
+.pink-bg {
+  background-color: #f7a8cf;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.confetti {
+  opacity: 1;
+  border-radius: 50%;
+  top: -10px;
+  animation: confetti-fall 5s linear, fade-out 5s 4s linear both;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+#soundBtn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: clamp(12px, 1.3vw, 16px);
+  padding: clamp(8px, 2vw, 20px) clamp(16px, 4vw, 40px);
+  color: white;
+  background-color: #f99ecf;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+
+#soundBtn:hover {
+  background-color: #ff1493;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+#question, #valentineImage {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}

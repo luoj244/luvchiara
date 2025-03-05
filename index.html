@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Day Proposal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <button id="soundBtn" onclick="toggleSound()">Enable Sound</button>
+    <audio id="backgroundMusic" loop>
+        <source src="assets/Filipina-girl.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="proposal-box">
+        <h1 id="question">Will you be my Valentine?</h1>
+        <img src="assets/bubu.gif" alt="Valentine's Image" id="valentineImage" style="max-width: 100%; height: auto; margin: 10px 0" />
+        <div class="button-container">
+            <button id="yesBtn" onclick="showAppreciation()">Yes</button>
+            <button id="noBtn" onclick="changePosition()">No</button>
+        </div>
+    </div>
+    <div id="confetti-wrapper"></div>
+    <script src="script.js"></script>
+</body>
+</html>
